@@ -16,6 +16,6 @@ RUN apk add --update curl && \
 COPY package.json .
 COPY package-lock.json .
 ADD . .
-RUN npm install -g @prisma/client prisma && prisma generate
+RUN npm install
 
 CMD ["node", "server.js"]
